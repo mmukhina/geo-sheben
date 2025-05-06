@@ -12,7 +12,7 @@ from tensorflow.keras import regularizers
 from tensorflow.keras.callbacks import EarlyStopping
 
 
-dataset_dir = pathlib.Path("flower_photos/")
+dataset_dir = pathlib.Path("Geo/")
 image_count = len(list(dataset_dir.glob("*/*.jpg")))
 print(f"Всего изображений: {image_count}")
 
@@ -103,7 +103,7 @@ history = model.fit(
 	train_ds,
 	validation_data=val_ds,
 	epochs=epochs,
-	callbacks=[cp_callback, early_stopping])
+	callbacks=[cp_callback])
 
 # visualize training and validation results
 acc = history.history['accuracy']

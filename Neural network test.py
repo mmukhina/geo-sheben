@@ -10,7 +10,7 @@ from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 from tensorflow.keras import regularizers
 
-dataset_dir = pathlib.Path("flower_photos/")
+dataset_dir = pathlib.Path("Geo/")
 image_count = len(list(dataset_dir.glob("*/*.jpg")))
 print(f"Всего изображений: {image_count}")
 
@@ -85,7 +85,7 @@ model.load_weights(checkpoint_path)
 loss, acc = model.evaluate(val_ds, verbose=2)
 print("Restored model, accuracy: {:5.2f}%".format(100 * acc))
 
-image = tf.keras.utils.load_img("9.jpg", target_size=(img_height, img_width))
+image = tf.keras.utils.load_img("11.jpg", target_size=(img_height, img_width))
 img_array = tf.keras.utils.img_to_array(image)
 img_array = tf.expand_dims(img_array, 0)
 
