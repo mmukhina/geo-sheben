@@ -128,5 +128,6 @@ plt.legend(loc='upper right')
 plt.title('Training and Validation Loss')
 plt.show()
 
-model.save_weights('flower_model.weights.h5')
+model.save_weights('geo.weights.h5')
+model.export('geo_model/')
 print("Model_saved")
